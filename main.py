@@ -552,46 +552,6 @@ def wait_for_click():
                     running = False
 
 
-def start_text(surface):
-    surface.fill('gray')
-    t = TextBox((100, 100), 'The goal of this game is to create hadrons for the customers\nA hadron is a particle/antiparticle affected by the strong nuclear force\nThere are 2 types of hadron\nBaryons are made from the combination of 3 quarks\nMesons are made of the combinations of 2 quarks\n\n\nClick to continue', 40)
-    t.draw(surface)
-    pygame.display.update()
-    wait_for_click()
-
-
-def text1(surface):
-    surface.fill('gray')
-    t = TextBox((100, 100), 'A Lepton is a type of fundament particle that is not\naffected by the strong nuclear force\nexamples of these are electrons and neutrinos', 40)
-    t.draw(surface)
-    pygame.display.update()
-    wait_for_click()
-
-
-def text2(surface):
-    surface.fill('gray')
-    t = TextBox((100, 100), 'In 1964 Murray Gell-Mann first postulated the existence of quarks.\nQuarks are a group of fundamental particles that make up hadrons\nThe evidence for the existence of fundament particles\ncomes from experiments preformed in particle accelerators\nwhere non fundamental particles are broken apart', 40)
-    t.draw(surface)
-    pygame.display.update()
-    wait_for_click()
-
-
-def text3(surface):
-    surface.fill('gray')
-    t = TextBox((100, 100), "Quarks have spin and charge\nthe charge of a Quark is measured\nas a fraction of the elementary charge 'e'\nThe charge of an anti-quark is the opposite\nof the charge of its counterpart", 40)
-    t.draw(surface)
-    pygame.display.update()
-    wait_for_click()
-
-
-def text4(surface):
-    surface.fill('gray')
-    t = TextBox((100, 100), "", 40)
-    t.draw(surface)
-    pygame.display.update()
-    wait_for_click()
-
-
 def weighted_random(seq, chance):
     total = sum(chance)
     rand = random.random() * total
@@ -666,11 +626,6 @@ def main():
 
     screen = pygame.display.set_mode((1270, 720))
     pygame.display.set_caption("FUNdamental")
-
-    start_text(screen)
-    text1(screen)
-    text2(screen)
-    text3(screen)
 
     picked_up = None
     belt = Belt()
